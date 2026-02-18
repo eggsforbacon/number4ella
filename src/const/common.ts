@@ -1,0 +1,1 @@
+export const BIRTHDAY = new Date(Date.parse("2004-11-10T00:00:00.000-08:00"));

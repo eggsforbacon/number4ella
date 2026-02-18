@@ -1,65 +1,70 @@
-import Image from "next/image";
+"use client";
+
+import Letter from "@/components/letter";
+import {useStore} from "@/store/store";
+import Gallery from "@/components/gallery";
+import {getRandomInt} from "@/utils";
+import {useEffect, useState} from "react";
+import NumberPicker from "@/components/number-picker";
 
 export default function Home() {
+
+  const {letterRead, setIsLetterOpen} = useStore();
+  const [term, setTerm] = useState<string>("");
+
+  const randomEndearment = () => {
+    const endearmentTerms = ["Love", "my Love",
+      "Honey", "Bug", "my Bug", "Superman", "Lovely",
+      "Sweetheart", "Baby", "my Baby", "Babe",
+      "my Heart", "my Silly Billy", "Dear",
+      "my Dear", "Vida", "mi Vida",
+      "Corazón", "mi Corazón",
+      "Corazoncito", "Amor", "mi Amor",
+      "Amorcito", "Cariño", "Cariño mío",
+      "mi Cariñito", "4 Words",
+      "Light of my life"];
+    return endearmentTerms[getRandomInt(endearmentTerms.length)];
+  }
+
+  useEffect(() => {
+    if (window !== undefined) {
+      const selectedTerm = randomEndearment();
+      setTerm(selectedTerm);
+    }
+  }, [])
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      <main className="flex-col gap-6 pt-[20vh] lg:pt-0 pb-6 text-center items-center justify-start lg:justify-center w-full min-h-screen">
+        <h1 className="sticky z-30 pt-6 pb-2 top-0 bg-forest-green-800 w-full text-5xl font-barriecito text-amber-100">Number
+          for Ella</h1>
+        <p className="font-nunito text-white/80 px-6 max-w-172">I don&#39;t know what the numbers are for, {term},
+          but I know you want them, and that&#39;s all convincing I need. I can&#39;t always be there, but I want
+          to, so this is another way of me trying to compensate.<br/><br/>And down here, a letter, for when you
+          long.
+        </p>
+        <div className="relative flex flex-col items-center justify-start">
+          <span className="absolute inline-flex h-full w-full opacity-75"/>
+          <span
+              className={`absolute left-1/2 -translate-x-1/2 bg-amber-100 h-6 w-3/4 ${letterRead ? "-bottom-1 transition-all duration-200 ease-in-out peer-hover:-translate-y-3" : "-bottom-6 animate-bounce"}`}/>
+          <button
+              onClick={() => setIsLetterOpen(true)}
+              className="font-bold peer cursor-pointer relative px-6 py-4 rounded-sm bg-neutral-300 text-crimson-300 text-xl font-barrio">Check
+            Mailbox
+          </button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <h2 className="sticky pt-6 pb-2 top-0 bg-forest-green-800 w-full text-4xl font-barriecito text-amber-100">How
+          does this work?</h2>
+        <p className="font-nunito text-white/80 px-6 max-w-172">You want two numbers from two ranges. These boxes down here
+          are fully customizable. Set a lower bound, set an upper bound, and take it for a spin! Once you get your
+          number - <span className="font-barriecito">and what comes with it *:) </span> - you can take it for a
+          spin again, with the same bounds, higher, or lower ones!
+        </p>
+        <p className="px-16 text-xs font-barrio text-amber-100/60 max-w-172">Note: the full effect of this will be better felt if
+          you keep your upper bound below 25 or so, but there <span className="font-bold italic">is</span> still
+          something more than just the number for you if you ever need to go higher. I love you Bug!</p>
+        <Letter/>
+        <Gallery/>
+        <NumberPicker />
       </main>
-    </div>
   );
 }

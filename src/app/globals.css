@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-barriecito: var(--font-barriecito), sans-serif;
+  --font-barrio: var(--font-barrio), sans-serif;
+  --font-nunito: var(--font-nunito), sans-serif;
+  --font-fleur-de-leah: var(--font-fleur-de-leah), serif;
+
+  --color-forest-green-50: oklch(84.275% 0.06102 183);
+  --color-forest-green-100: oklch(80.585% 0.07549 181.86);
+  --color-forest-green-200: oklch(73.298% 0.09851 180.1);
+  --color-forest-green-300: oklch(61.703% 0.09026 179.75);
+  --color-forest-green-400: oklch(47.306% 0.06702 179.97);
+  --color-forest-green-500: oklch(31.326% 0.04125 180.37);
+  --color-forest-green-600: oklch(27.409% 0.03452 180);
+  --color-forest-green-700: oklch(23.297% 0.02831 179.81);
+  --color-forest-green-800: oklch(19.104% 0.02009 184.1);
+  --color-forest-green-900: oklch(14.57% 0.01263 186.08);
+  --color-forest-green-950: oklch(12.132% 0.01048 179.9);
+
+  --color-crimson-50: oklch(76.125% 0.14444 13.673);
+  --color-crimson-100: oklch(70.634% 0.18737 16.719);
+  --color-crimson-200: oklch(63.796% 0.2476 24.04);
+  --color-crimson-300: oklch(54.92% 0.2237 26.804);
+  --color-crimson-400: oklch(40.506% 0.16455 25.834);
+  --color-crimson-500: oklch(24.881% 0.10034 22.595);
+  --color-crimson-600: oklch(22.504% 0.09057 21.478);
+  --color-crimson-700: oklch(20.063% 0.08057 20.004);
+  --color-crimson-800: oklch(17.294% 0.06925 17.548);
+  --color-crimson-900: oklch(14.63% 0.05859 17.641);
+  --color-crimson-950: oklch(13.296% 0.05315 14.356);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    @apply relative flex flex-col items-center justify-start dark:bg-forest-green-900 bg-forest-green-600;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply max-w-480 w-full bg-forest-green-800;
+  }
+
+  main {
+    @apply flex relative w-full;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  .debug {
+    border: magenta 1px solid;
+  }
 }
