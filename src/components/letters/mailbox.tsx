@@ -2,7 +2,7 @@
 
 import {useStore} from "@/store/store";
 import Image from "next/image";
-import {LETTERS} from "@/const/letters";
+import {LETTER_COUNT, LETTERS} from "@/const/letters";
 import Envelope from "@/components/letters/envelope";
 
 const Mailbox = () => {
@@ -41,8 +41,8 @@ const Mailbox = () => {
             city: "95459, Jenner"
         },
         {
-            street: "CA-116 28301",
-            city: "95459, Jenner"
+            street: "E. Cotati Ave 1870, ML-5D ",
+            city: "94951, Penngrove"
         },
     ]
 
@@ -52,20 +52,20 @@ const Mailbox = () => {
                 <Image src={"/images/textures/metal.png"} alt={"Metal texture."} width={2000}
                        height={1500} quality={100} priority
                        className="absolute top-0 left-0 opacity-50 brightness-50 select-none pointer-events-none h-[95vh] object-cover"/>
-                <div className="flex items-center justify-between p-6">
-                    <h2 className="relative font-barriecito text-left">Mailbox</h2>
+                <div className="flex flex-col lg:flex-row items-center justify-between p-6 gap-4">
+                    <h2 className="relative font-barriecito text-left text-5xl lg:text-7xl">Mailbox</h2>
                     <button
                         onClick={() => {
                             setMailboxOpen(false);
                         }}
-                        className="font-barriecito relative border-2 border-neutral-600 px-6 py-2 font-bold text-2xl transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer">Close
+                        className="font-barriecito relative border-2 border-neutral-600 px-6 py-2 font-bold text-lg lg:text-2xl transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer">Close
                         Mailbox
                     </button>
                 </div>
-                <div className="relative flex flex-wrap gap-x-8 h-full items-start px-6">
+                <div className="relative flex flex-col items-center lg:flex-wrap gap-8 h-full lg:items-start px-6 overflow-y-scroll">
                     {LETTERS(isTodayBirthday, isTodayMagicversary, isTodayAnniversary, today).map((l, i) => {
                         return (
-                            <Envelope key={i} index={i} address={addresses[i]}>
+                            <Envelope key={i} index={i} address={addresses[i]} read={i === LETTER_COUNT - 1}>
                                 <Image src={`/images/stamps/${stamps[i]}`} alt={"A stamp"} height={600} width={600} quality={100} className="h-full absolute object-cover w-full" />
                             </Envelope>
                         );

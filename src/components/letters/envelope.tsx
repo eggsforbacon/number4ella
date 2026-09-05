@@ -10,13 +10,13 @@ type _Props = {
     address: { street: string, city: string };
 };
 
-const Envelope = ({index, read = false, children, address}: _Props) => {
+const Envelope = ({index, read, children, address}: _Props) => {
     const {today, setActiveLetter, isTodayBirthday, isTodayAnniversary, isTodayMagicversary, setShowLetter} = useStore();
     const L = LETTERS(isTodayBirthday, isTodayMagicversary, isTodayAnniversary, today);
 
     return (
         <div
-            className="relative bg-amber-100 aspect-6/4 text-black flex flex-col p-4 justify-between overflow-clip rounded cursor-pointer transition-all duration-200 ease-in-out hover:scale-[1.1]"
+            className="w-72 lg:w-96 relative bg-amber-100 aspect-6/4 text-black flex flex-col p-4 justify-between overflow-clip rounded cursor-pointer transition-all duration-200 ease-in-out hover:scale-[1.1]"
             onClick={() => {
                 setActiveLetter({date: L[index].date, letter: L[index].letter});
                 setShowLetter(true);
@@ -24,18 +24,19 @@ const Envelope = ({index, read = false, children, address}: _Props) => {
             <Image src={"/images/textures/envelope.jpg"} alt={"Envelope texture."} width={2000}
                    height={1500} quality={100} priority
                    className="absolute top-0 left-0 opacity-75 brightness-75 select-none pointer-events-none object-cover"/>
-            <div className="relative flex items-center justify-between gap-20">
-                <div className="flex flex-col items-start justify-start text-start text-sm text-shadow-xl">
+            {read && <span className="absolute right-2 top-2 bg-red-900 aspect-square w-4 rounded-full animate-bounce"/>}
+            <div className="relative flex items-center justify-between gap-4 lg:gap-20">
+                <div className="flex flex-col items-start justify-start text-start text-xs lg:text-sm text-shadow-xl">
                     <p>Ella Weiss</p>
                     <p>{address.street}</p>
                     <p>{address.city}, California</p>
                     <p>United States of America</p>
                 </div>
-                <div className="relative aspect-square overflow-clip h-16 shadow-lg">
+                <div className="relative aspect-square overflow-clip h-10 lg:h-16 shadow-lg">
                     {children}
                 </div>
             </div>
-            <p className="relative text-xl font-fleur-de-leah">{new Date(Date.parse(L[index].date)).toDateString()}</p>
+            <p className="relative text-lg lg:text-xl font-fleur-de-leah">{new Date(Date.parse(L[index].date)).toDateString()}</p>
         </div>
     );
 }

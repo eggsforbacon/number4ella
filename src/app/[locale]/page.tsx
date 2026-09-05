@@ -56,7 +56,7 @@ return (
                 {t("number")}
             </Link>
         </div>
-        <Link href="/sweden" className="absolute top-17 left-7 lg:top-auto lg:left-auto lg:bottom-17 lg:right-17 text-forest-green-700">17</Link>
+        <Link href="/sweden" className="text-sm absolute left-7 lg:left-auto bottom-17 lg:right-17 text-forest-green-700 rounded-full aspect-square h-6 border border-forest-green-700">17</Link>
         <Mailbox/>
         <Letter />
     </main>
