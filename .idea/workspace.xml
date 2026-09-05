@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85133457-b59b-4c66-a5c2-0c2d5dec2fdd" name="Changes" comment="added mailbox functionality and old letters">
+    <list default="true" id="85133457-b59b-4c66-a5c2-0c2d5dec2fdd" name="Changes" comment="wrote anniversary letter">
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/gallery/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/film-strip.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/sweden/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/sweden/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/letters/envelope.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letters/envelope.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/letters/mailbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letters/mailbox.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/const/letters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/letters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/common.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -122,7 +120,8 @@
       <workItem from="1773672029407" duration="600000" />
       <workItem from="1788506140381" duration="4973000" />
       <workItem from="1788594774184" duration="11530000" />
-      <workItem from="1788607849514" duration="11335000" />
+      <workItem from="1788607849514" duration="12223000" />
+      <workItem from="1788633952424" duration="6990000" />
     </task>
     <task id="LOCAL-00001" summary="fix: refresh commit to non-vulnerable Next version">
       <option name="closed" value="true" />
@@ -148,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788619182026</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="wrote anniversary letter">
+      <option name="closed" value="true" />
+      <created>1788623076986</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1788623076986</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +165,7 @@
     <MESSAGE value="fix: refresh commit to non-vulnerable Next version" />
     <MESSAGE value="added rose model" />
     <MESSAGE value="added mailbox functionality and old letters" />
-    <option name="LAST_COMMIT_MESSAGE" value="added mailbox functionality and old letters" />
+    <MESSAGE value="wrote anniversary letter" />
+    <option name="LAST_COMMIT_MESSAGE" value="wrote anniversary letter" />
   </component>
 </project>

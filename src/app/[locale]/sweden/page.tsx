@@ -1,11 +1,12 @@
 "use client";
 
 import React, {useState} from "react";
-import {Link} from "@/i18n/navigation";
+import {Link, useRouter} from "@/i18n/navigation";
 
 export default function Sweden () {
     const [password, setPassword] = useState<string>("");
     const [hint, setHint] = useState<string>("");
+    const router = useRouter();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (hint !== "") setHint("");
@@ -14,8 +15,8 @@ export default function Sweden () {
 
     const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (password === process.env.SWEDEN_P) {
-
+        if (password === process.env.NEXT_PUBLIC_SWEDEN_P) {
+            router.push("/gallery");
         } else {
             setPassword("");
             setHint("Keep looking.");
