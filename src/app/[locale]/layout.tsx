@@ -1,7 +1,8 @@
 import type {Metadata} from "next";
 import {Barriecito, Barrio, Nunito, Fleur_De_Leah} from "next/font/google";
-import "./globals.css";
+import "./../globals.css";
 import React from "react";
+import {NextIntlClientProvider} from "next-intl";
 
 const barriecito = Barriecito({
     variable: "--font-barriecito",
@@ -41,7 +42,7 @@ export default function RootLayout({
         <body
             className={`${nunito.variable} ${barrio.variable} ${barriecito.variable} ${fleurDeLeah.variable} antialiased`}
         >
-        {children}
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
         </body>
         </html>
     );

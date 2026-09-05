@@ -5,7 +5,7 @@ import Polaroid from "@/components/polaroid";
 import {useEffect, useState} from "react";
 
 const Gallery = () => {
-    const {galleryLetter, isLetterOpen, toggleGalleryLetter} = useStore();
+    const {galleryLetter, activeLetter, toggleGalleryLetter} = useStore();
 
     const positions: { x: string, y: string, rotation: string }[] = [
         {x: "translate-x-4 lg:translate-x-16 xl:translate-x-8 2xl:translate-x-18", y: "translate-y-6", rotation: "-rotate-[8deg]"},
@@ -104,7 +104,7 @@ const Gallery = () => {
 
     return (
         <div
-            className={`z-50 absolute top-0 lg:right-0 h-full w-full lg:w-2/3 transition-all duration-300 delay-100 ${isLetterOpen && galleryLetter ? "opacity-100" : "select-none pointer-events-none opacity-0"} overflow-y-scroll overflow-x-visible!`}>
+            className={`z-50 absolute top-0 lg:right-0 h-full w-full lg:w-2/3 transition-all duration-300 delay-100 ${activeLetter && galleryLetter ? "opacity-100" : "select-none pointer-events-none opacity-0"} overflow-y-scroll overflow-x-visible!`}>
             {shuffledIndexes.map((randomIndex, index) => {
                 const {caption, date, alt} = metaData[randomIndex];
                 return (

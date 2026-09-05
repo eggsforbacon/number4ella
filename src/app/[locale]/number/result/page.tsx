@@ -6,13 +6,11 @@ import {getRandomInt} from "@/utils";
 import {FaPlay} from "react-icons/fa";
 import {FaArrowRotateLeft} from "react-icons/fa6";
 import NumberPicker from "@/components/number-picker";
-import Link from "next/link";
 
 export default function Result() {
-    const [result, setResult] = useState<number | null>(null);
     const [ended, setEnded] = useState<boolean>(false);
     const [playing, setPlaying] = useState<boolean>(false);
-    const {upperBound, setUpperBound, lowerBound, setLowerBound} = useStore();
+    const {upperBound, setUpperBound, lowerBound, setLowerBound, result, setResult} = useStore();
 
     const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -75,7 +73,7 @@ export default function Result() {
             const res = getRandomInt(upperBound as number, lowerBound as number);
             setResult(res > MAX ? MAX : res);
         }
-    }, [lowerBound, setLowerBound, setUpperBound, upperBound]);
+    }, [lowerBound, setLowerBound, setResult, setUpperBound, upperBound]);
 
     return (
         <main
@@ -105,18 +103,6 @@ export default function Result() {
             </div>
             <div className="flex flex-col items-center justify-center gap-2 w-md">
                 <NumberPicker repeat />
-                <button
-                    onClick={(e) => {
-                        e.preventDefault();
-                        const res = getRandomInt(upperBound as number, lowerBound as number);
-                        setResult(res);
-                    }}
-                    className="inline-flex items-center justify-center w-full max-w-58 text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-barriecito transition-all duration-200 ease-in-out hover:bg-forest-green-400">
-                    Number, again!
-                </button>
-                <Link href={"/"} className="inline-flex items-center justify-center w-full max-w-58 text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-barriecito transition-all duration-200 ease-in-out hover:bg-forest-green-400">
-                    Go back home
-                </Link>
             </div>
         </main>
     );
