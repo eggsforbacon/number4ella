@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85133457-b59b-4c66-a5c2-0c2d5dec2fdd" name="Changes" comment="wrote anniversary letter">
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/gallery/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/film-strip.tsx" afterDir="false" />
+    <list default="true" id="85133457-b59b-4c66-a5c2-0c2d5dec2fdd" name="Changes" comment="fix to anniversary letter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/sweden/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/sweden/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/const/letters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/letters.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +118,8 @@
       <workItem from="1788506140381" duration="4973000" />
       <workItem from="1788594774184" duration="11530000" />
       <workItem from="1788607849514" duration="12223000" />
-      <workItem from="1788633952424" duration="6990000" />
+      <workItem from="1788633952424" duration="7613000" />
+      <workItem from="1788934285417" duration="1793000" />
     </task>
     <task id="LOCAL-00001" summary="fix: refresh commit to non-vulnerable Next version">
       <option name="closed" value="true" />
@@ -155,7 +153,23 @@
       <option name="project" value="LOCAL" />
       <updated>1788623076986</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix to anniversary letter">
+      <option name="closed" value="true" />
+      <created>1788645444205</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1788645444205</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix to anniversary letter">
+      <option name="closed" value="true" />
+      <created>1788645726785</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1788645726785</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +180,7 @@
     <MESSAGE value="added rose model" />
     <MESSAGE value="added mailbox functionality and old letters" />
     <MESSAGE value="wrote anniversary letter" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrote anniversary letter" />
+    <MESSAGE value="fix to anniversary letter" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix to anniversary letter" />
   </component>
 </project>

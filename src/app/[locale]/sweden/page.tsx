@@ -16,7 +16,7 @@ export default function Sweden () {
     const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (password === process.env.NEXT_PUBLIC_SWEDEN_P) {
-            router.push("/gallery");
+            setHint("11.09.2026 :)");
         } else {
             setPassword("");
             setHint("Keep looking.");
