@@ -2,11 +2,13 @@
 
 import React, {useState} from "react";
 import {Link, useRouter} from "@/i18n/navigation";
+import {useStore} from "@/store/store";
 
 export default function Sweden () {
     const [password, setPassword] = useState<string>("");
     const [hint, setHint] = useState<string>("");
     const router = useRouter();
+    const {today} = useStore();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (hint !== "") setHint("");
@@ -16,6 +18,9 @@ export default function Sweden () {
     const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (password === process.env.NEXT_PUBLIC_SWEDEN_P) {
+            const date = process.env.NEXT_PUBLIC_FLOODGATES ?? "";
+            const floodgates = new Date(Date.parse(date));
+            if (date !== "" && floodgates >= today)
             setHint("11.09.2026 :)");
         } else {
             setPassword("");

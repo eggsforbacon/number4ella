@@ -1,6 +1,6 @@
 import {defineRouting} from 'next-intl/routing';
 
-export const PATHS = ["/", "/sweden", "/number", "/number/result", ] as const;
+export const PATHS = ["/", "/sweden", "/gallery", "/number", "/number/result", ] as const;
 export type Path = (typeof PATHS)[number];
 export const LOCALES = ['en', 'es',]
 
@@ -9,7 +9,7 @@ export const routing = defineRouting({
     defaultLocale: 'en',
     domains: [
         {
-            domain: "number4ella.com",
+            domain: "en.number4ella.com",
             defaultLocale: "en",
             locales: ["en"]
         },
@@ -19,23 +19,16 @@ export const routing = defineRouting({
             locales: ["es"]
         },
     ],
-    // pathnames: {
-    //     "/": "/",
-    //     "/software": {
-    //         "es": "/desarrollo",
-    //         "de": "/entwicklung",
-    //     },
-    //     "/music": {
-    //         "es": "/música",
-    //         "de": "/musik",
-    //     },
-    //     "/contact": {
-    //         "es": "/contacto",
-    //         "de": "/kontakt",
-    //     },
-    //     "/about": {
-    //         "es": "/acerca",
-    //         "de": "/über",
-    //     },
-    // }
+    pathnames: {
+        "/": "/",
+        "/sweden": "/sweden",
+        "/number": {
+            "en": "/number",
+            "es": "/numero",
+        },
+        "/number/result": {
+            "en": "/number/result",
+            "es": "/numero/resultado",
+        }
+    }
 });

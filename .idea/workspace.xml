@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85133457-b59b-4c66-a5c2-0c2d5dec2fdd" name="Changes" comment="fix to anniversary letter">
+    <list default="true" id="85133457-b59b-4c66-a5c2-0c2d5dec2fdd" name="Changes" comment="fix to sweden">
+      <change afterPath="$PROJECT_DIR$/ecosystem.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/sweden/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/sweden/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/routing.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,30 +47,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WebstormProjects/number4ella.com/src/i18n&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\WebstormProjects\\number4ella.com\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "D:/WebstormProjects/number4ella.com",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\WebstormProjects\\number4ella.com\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\number4ella.com" />
       <recent name="D:\WebstormProjects\number4ella.com\src\i18n" />
       <recent name="D:\WebstormProjects\number4ella.com\src" />
       <recent name="D:\WebstormProjects\number4ella.com\src\app" />
@@ -119,7 +122,7 @@
       <workItem from="1788594774184" duration="11530000" />
       <workItem from="1788607849514" duration="12223000" />
       <workItem from="1788633952424" duration="7613000" />
-      <workItem from="1788934285417" duration="1793000" />
+      <workItem from="1788934285417" duration="6374000" />
     </task>
     <task id="LOCAL-00001" summary="fix: refresh commit to non-vulnerable Next version">
       <option name="closed" value="true" />
@@ -169,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788645726785</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix to sweden">
+      <option name="closed" value="true" />
+      <created>1788937537087</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1788937537087</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +192,7 @@
     <MESSAGE value="added mailbox functionality and old letters" />
     <MESSAGE value="wrote anniversary letter" />
     <MESSAGE value="fix to anniversary letter" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix to anniversary letter" />
+    <MESSAGE value="fix to sweden" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix to sweden" />
   </component>
 </project>
