@@ -119,7 +119,7 @@ const Gallery = () => {
             })}
             <button
                 onClick={() => toggleGalleryLetter()}
-                className="lg:hidden fixed left-1/2 -translate-x-1/2 bottom-6 border border-neutral-600 bg-amber-100 font-fleur-de-leah px-6 py-2 font-bold text-xl transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer">
+                className="lg:hidden fixed left-1/2 -translate-x-1/2 bottom-6 border border-neutral-600 bg-amber-100 font-explora px-6 py-2 font-bold text-xl transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer">
                 {galleryLetter ? "Hide" : "Show"} Yourself {galleryLetter &&
                 <span className="font-nunito text-lg">&nbsp;&nbsp;*:(</span>}
             </button>

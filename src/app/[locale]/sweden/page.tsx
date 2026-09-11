@@ -3,12 +3,15 @@
 import React, {useState} from "react";
 import {Link, useRouter} from "@/i18n/navigation";
 import {useStore} from "@/store/store";
+import {useTranslations} from "next-intl";
 
 export default function Sweden () {
     const [password, setPassword] = useState<string>("");
     const [hint, setHint] = useState<string>("");
     const router = useRouter();
     const {today} = useStore();
+    const t = useTranslations("Sweden");
+
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (hint !== "") setHint("");
@@ -24,7 +27,7 @@ export default function Sweden () {
             setHint("11.09.2026 :)");
         } else {
             setPassword("");
-            setHint("Keep looking.");
+            setHint(t("hint"));
         }
     }
 
@@ -35,8 +38,8 @@ export default function Sweden () {
                        onChange={(e) => handleChange(e)}
                        className="w-full border-b-2 border-b-neutral-500 px-6 py-2 text-amber-100 placeholder:text-neutral-500 transition-all duration-300 ease-in-out active:outline-0 active:ring-0"/>
                 <p className="text-red-500 text-sm">{hint}</p>
-                <input type={"submit"} value={"Confirm"} className="text-amber-100 rounded border border-amber-100 px-6 py-2 w-full transition-all duration-200 ease-in-out hover:bg-amber-100 hover:font-bold hover:text-black cursor-pointer"/>
-                <Link href={"/"} className="text-neutral-300 rounded border border-neutral-600 px-6 py-2 w-full transition-all duration-200 ease-in-out hover:bg-neutral-300 hover:font-bold hover:text-black cursor-pointer">Go back home</Link>
+                <input type={"submit"} value={t("confirm")} className="text-amber-100 rounded border border-amber-100 px-6 py-2 w-full transition-all duration-200 ease-in-out hover:bg-amber-100 hover:font-bold hover:text-black cursor-pointer"/>
+                <Link href={"/"} className="text-neutral-300 rounded border border-neutral-600 px-6 py-2 w-full transition-all duration-200 ease-in-out hover:bg-neutral-300 hover:font-bold hover:text-black cursor-pointer">{t("back")}</Link>
             </form>
         </main>
     );

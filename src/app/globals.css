@@ -1,11 +1,7 @@
+@import url("./fonts.css");
 @import "tailwindcss";
 
 @theme {
-  --font-barriecito: var(--font-barriecito), sans-serif;
-  --font-barrio: var(--font-barrio), sans-serif;
-  --font-nunito: var(--font-nunito), sans-serif;
-  --font-fleur-de-leah: var(--font-fleur-de-leah), serif;
-
   --color-forest-green-50: oklch(84.275% 0.06102 183);
   --color-forest-green-100: oklch(80.585% 0.07549 181.86);
   --color-forest-green-200: oklch(73.298% 0.09851 180.1);

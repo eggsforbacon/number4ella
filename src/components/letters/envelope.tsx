@@ -36,7 +36,7 @@ const Envelope = ({index, read, children, address}: _Props) => {
                     {children}
                 </div>
             </div>
-            <p className="relative text-lg lg:text-xl font-fleur-de-leah">{new Date(Date.parse(L[index].date)).toDateString()}</p>
+            <p className="relative text-lg lg:text-xl font-explora">{new Date(Date.parse(L[index].date)).toDateString()}</p>
         </div>
     );
 }

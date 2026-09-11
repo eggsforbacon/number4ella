@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/*ROMANS STORY*/
+
+@font-face {
+    font-family: "Romans Story";
+    src: url("/fonts/Romans Story.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@theme {
+    --font-romans-story: "Romans Story", sans-serif;
+    --font-barriecito: var(--font-barriecito), sans-serif;
+    --font-barrio: var(--font-barrio), sans-serif;
+    --font-nunito: var(--font-nunito), sans-serif;
+    --font-explora: var(--font-explora), serif;
+}

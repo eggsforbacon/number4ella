@@ -6,6 +6,7 @@ import {getRandomInt} from "@/utils";
 import {FaPlay} from "react-icons/fa";
 import {FaArrowRotateLeft} from "react-icons/fa6";
 import NumberPicker from "@/components/number-picker";
+import {useTranslations} from "next-intl";
 
 export default function Result() {
     const [ended, setEnded] = useState<boolean>(false);
@@ -75,11 +76,13 @@ export default function Result() {
         }
     }, [lowerBound, setLowerBound, setResult, setUpperBound, upperBound]);
 
+    const t = useTranslations("Result");
+
     return (
         <main
             className="flex-col lg:flex-row gap-6 pt-[10vh] px-6 lg:pt-0 pb-6 text-center items-center font-barriecito text-amber-100 justify-start lg:justify-center w-full min-h-screen">
             <div className="flex flex-col items-center justify-center gap-6">
-                <h2 className="text-3xl font-bold">Your number is: </h2>
+                <h2 className="text-3xl font-bold">{t("title")}</h2>
                 <div
                     className="relative w-full max-w-96 h-148 overflow-clip rounded-xl shadow-lg shadow-forest-green-500/60">
                     <video key={result} ref={videoRef} className="relative" playsInline muted={false} onEnded={() => {
@@ -99,7 +102,7 @@ export default function Result() {
                     </div>
                 </div>
                 <h1 className="font-bold text-5xl">{result}</h1>
-                <p className="font-fleur-de-leah text-3xl max-w-172">{poems[(result ?? 1) - 1]}</p>
+                <p className="font-explora text-3xl max-w-172">{poems[(result ?? 1) - 1]}</p>
             </div>
             <div className="flex flex-col items-center justify-center gap-2 w-md">
                 <NumberPicker repeat />
