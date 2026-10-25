@@ -1,17 +1,17 @@
 "use client";
 
 import React, {useEffect, useRef, useState} from "react";
-import {useStore} from "@/store/store";
 import {getRandomInt} from "@/utils";
 import {FaPlay} from "react-icons/fa";
 import {FaArrowRotateLeft} from "react-icons/fa6";
 import NumberPicker from "@/components/number-picker";
 import {useTranslations} from "next-intl";
+import { useGenerator } from "@/store/generator";
 
 export default function Result() {
     const [ended, setEnded] = useState<boolean>(false);
     const [playing, setPlaying] = useState<boolean>(false);
-    const {upperBound, setUpperBound, lowerBound, setLowerBound, result, setResult} = useStore();
+    const {upperBound, setUpperBound, lowerBound, setLowerBound, result, setResult} = useGenerator();
 
     const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -80,7 +80,7 @@ export default function Result() {
 
     return (
         <main
-            className="flex-col lg:flex-row gap-6 pt-[10vh] px-6 lg:pt-0 pb-6 text-center items-center font-barriecito text-amber-100 justify-start lg:justify-center w-full min-h-screen">
+            className="flex-col lg:flex-row gap-6 pt-[10vh] px-6 lg:pt-0 pb-6 text-center items-center font-autour-one text-amber-100 justify-start lg:justify-center w-full min-h-screen">
             <div className="flex flex-col items-center justify-center gap-6">
                 <h2 className="text-3xl font-bold">{t("title")}</h2>
                 <div
@@ -102,7 +102,7 @@ export default function Result() {
                     </div>
                 </div>
                 <h1 className="font-bold text-5xl">{result}</h1>
-                <p className="font-explora text-3xl max-w-172">{poems[(result ?? 1) - 1]}</p>
+                <p className="font-cutive-mono text-3xl max-w-172">{poems[(result ?? 1) - 1]}</p>
             </div>
             <div className="flex flex-col items-center justify-center gap-2 w-md">
                 <NumberPicker repeat />

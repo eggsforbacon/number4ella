@@ -1,11 +1,11 @@
 "use client";
 
-import {useStore} from "@/store/store";
-import Polaroid from "@/components/polaroid";
+import {useLetters} from "@/store/letters";
+import Polaroid from "@/components/gallery/polaroid";
 import {useEffect, useState} from "react";
 
 const Gallery = () => {
-    const {galleryLetter, activeLetter, toggleGalleryLetter} = useStore();
+    const {galleryLetter, activeLetter, toggleGalleryLetter} = useLetters();
 
     const positions: { x: string, y: string, rotation: string }[] = [
         {x: "translate-x-4 lg:translate-x-16 xl:translate-x-8 2xl:translate-x-18", y: "translate-y-6", rotation: "-rotate-[8deg]"},
@@ -105,21 +105,21 @@ const Gallery = () => {
     return (
         <div
             className={`z-50 absolute top-0 lg:right-0 h-full w-full lg:w-2/3 transition-all duration-300 delay-100 ${activeLetter && galleryLetter ? "opacity-100" : "select-none pointer-events-none opacity-0"} overflow-y-scroll overflow-x-visible!`}>
-            {shuffledIndexes.map((randomIndex, index) => {
+            {/*{shuffledIndexes.map((randomIndex, index) => {
                 const {caption, date, alt} = metaData[randomIndex];
                 return (
                     <Polaroid
                         key={randomIndex}
                         source={`/images/gallery/${randomIndex}.jpg`} alt={alt}
-                        position={positions[index]}
+                        position={1}
                         caption={caption}
                         date={date}
                     />
                 )
-            })}
+            })}*/}
             <button
                 onClick={() => toggleGalleryLetter()}
-                className="lg:hidden fixed left-1/2 -translate-x-1/2 bottom-6 border border-neutral-600 bg-amber-100 font-explora px-6 py-2 font-bold text-xl transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer">
+                className="lg:hidden fixed left-1/2 -translate-x-1/2 bottom-6 border border-neutral-600 bg-amber-100 font-cutive-mono px-6 py-2 font-bold text-xl transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer">
                 {galleryLetter ? "Hide" : "Show"} Yourself {galleryLetter &&
                 <span className="font-nunito text-lg">&nbsp;&nbsp;*:(</span>}
             </button>

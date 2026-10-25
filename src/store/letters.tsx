@@ -18,17 +18,11 @@ interface Store {
     setMailboxOpen: (mailboxOpen: boolean) => void;
     galleryLetter: boolean;
     toggleGalleryLetter: () => void;
-    upperBound: number | "";
-    lowerBound: number | "";
-    setUpperBound: (upperBound: number | "") => void;
-    setLowerBound: (lowerBound: number | "") => void;
-    result: number;
-    setResult: (result: number) => void;
     showLetter: boolean;
     setShowLetter: (showLetter: boolean) => void;
 }
 
-export const useStore = create<Store>((set) => ({
+export const useLetters = create<Store>((set) => ({
     today: TODAY,
     isTodayBirthday: TODAY.getUTCDate() === BIRTHDAY.getUTCDate() && TODAY.getUTCMonth() === BIRTHDAY.getUTCMonth(),
     isTodayMagicversary: TODAY.getUTCDate() === MAGIC_VERSARY.getUTCDate() && TODAY.getUTCMonth() === MAGIC_VERSARY.getUTCMonth(),
@@ -41,12 +35,6 @@ export const useStore = create<Store>((set) => ({
     setLetterRead: (letterRead: boolean) => set(() => ({mailboxRead: letterRead})),
     setMailboxOpen: (isMailboxOpen: boolean) => set(() => ({isMailboxOpen})),
     toggleGalleryLetter: () => set((state) => ({galleryLetter: !state.galleryLetter})),
-    upperBound: "",
-    lowerBound: "",
-    setUpperBound: (upperBound: number | "") => set(() => ({upperBound})),
-    setLowerBound: (lowerBound: number | "") => set(() => ({lowerBound})),
-    result: -1,
-    setResult: (result: number) => set(() => ({result})),
     showLetter: false,
     setShowLetter: (showLetter: boolean) => set(() => ({showLetter})),
 }));

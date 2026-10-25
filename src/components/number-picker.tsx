@@ -1,14 +1,14 @@
 "use client";
 
 import React, {useEffect, useState} from "react";
-import {useStore} from "@/store/store";
 import {useRouter} from "next/navigation";
 import {Link} from "@/i18n/navigation";
 import {useTranslations} from "next-intl";
 import {getRandomInt} from "@/utils";
+import { useGenerator } from "@/store/generator";
 
 const NumberPicker = ({repeat = false}: { repeat?: boolean }) => {
-    const {upperBound, setUpperBound, lowerBound, setLowerBound, setResult} = useStore();
+    const {upperBound, setUpperBound, lowerBound, setLowerBound, setResult} = useGenerator();
     const [upper, setUpper] = useState<number | "">("");
     const [lower, setLower] = useState<number | "">("");
     const router = useRouter();
@@ -60,7 +60,7 @@ const NumberPicker = ({repeat = false}: { repeat?: boolean }) => {
                                 setLowerBound(lower);
                                 router.push("/number/result");
                             }}
-                            className="inline-flex items-center justify-center max-w-80 text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-barriecito transition-all duration-200 ease-in-out hover:bg-forest-green-400">
+                            className="inline-flex items-center justify-center max-w-80 text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-autour-one transition-all duration-200 ease-in-out hover:bg-forest-green-400">
                             {t("range")}
                         </button>
                     ) : (
@@ -69,7 +69,7 @@ const NumberPicker = ({repeat = false}: { repeat?: boolean }) => {
                             setLowerBound(lower);
                             router.push("/number/result");
                         }}
-                                className="inline-flex items-center justify-center max-w-80 text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-barriecito transition-all duration-200 ease-in-out hover:bg-forest-green-400">
+                                className="inline-flex items-center justify-center max-w-80 text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-autour-one transition-all duration-200 ease-in-out hover:bg-forest-green-400">
                             {t("number")}
                         </button>
                     )}
@@ -79,11 +79,11 @@ const NumberPicker = ({repeat = false}: { repeat?: boolean }) => {
                             const res = getRandomInt(upperBound as number, lowerBound as number);
                             setResult(res);
                         }}
-                        className="inline-flex items-center justify-center w-full max-w-58 text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-barriecito transition-all duration-200 ease-in-out hover:bg-forest-green-400">
+                        className="inline-flex items-center justify-center w-full max-w-58 text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-autour-one transition-all duration-200 ease-in-out hover:bg-forest-green-400">
                         {t("repeat")}
                     </button>}
                     <Link href={"/"}
-                          className="inline-flex items-center justify-center w-full text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-barriecito transition-all duration-200 ease-in-out hover:bg-forest-green-400">
+                          className="inline-flex items-center justify-center w-full text-center font-bold cursor-pointer relative p-4 rounded-xl text-amber-100 border border-forest-green-400 text-lg font-autour-one transition-all duration-200 ease-in-out hover:bg-forest-green-400">
                         {t("home")}
                     </Link>
                 </div>

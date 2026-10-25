@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85133457-b59b-4c66-a5c2-0c2d5dec2fdd" name="Changes" comment="fix to deploy (hopefully)">
-      <change afterPath="$PROJECT_DIR$/src/app/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/const/gallery.ts" afterDir="false" />
+    <list default="true" id="85133457-b59b-4c66-a5c2-0c2d5dec2fdd" name="Changes" comment="uploaded videos (batch 2)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/gallery/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/gallery/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/number/result/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/number/result/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/sweden/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/sweden/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/film-strip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/film-strip.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/letters/envelope.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letters/envelope.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/letters/letter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letters/letter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/polaroid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/polaroid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dictionaries/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dictionaries/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/es.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +121,8 @@
       <workItem from="1788633952424" duration="7613000" />
       <workItem from="1788934285417" duration="14781000" />
       <workItem from="1789046548374" duration="10545000" />
-      <workItem from="1789143182450" duration="8925000" />
+      <workItem from="1789143182450" duration="9341000" />
+      <workItem from="1789204048548" duration="1522000" />
     </task>
     <task id="LOCAL-00001" summary="fix: refresh commit to non-vulnerable Next version">
       <option name="closed" value="true" />
@@ -203,11 +188,38 @@
       <option name="project" value="LOCAL" />
       <updated>1788950948877</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added code changes">
+      <option name="closed" value="true" />
+      <created>1789154261554</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1789154261554</updated>
+    </task>
+    <task id="LOCAL-00010" summary="uploaded videos (batch 1)">
+      <option name="closed" value="true" />
+      <created>1789154362108</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1789154362108</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix: refresh commit to non-vulnerable Next version" />
@@ -217,6 +229,9 @@
     <MESSAGE value="fix to anniversary letter" />
     <MESSAGE value="fix to sweden" />
     <MESSAGE value="fix to deploy (hopefully)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix to deploy (hopefully)" />
+    <MESSAGE value="added code changes" />
+    <MESSAGE value="uploaded videos" />
+    <MESSAGE value="uploaded videos (batch 1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="uploaded videos (batch 1)" />
   </component>
 </project>
