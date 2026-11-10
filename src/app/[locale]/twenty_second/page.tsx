@@ -113,7 +113,7 @@ export default function TwentySecond() {
   return (
     <main
       ref={mainContainerRef}
-      className={`flex flex-col gap-4 items-center justify-center px-6 md:px-16 lg:px-32 min-h-screen w-full transition-all duration-400 ease-in-out ${playing ? "bg-black" : "bg-forest-green-800"}`}
+      className={`flex flex-col gap-4 items-center justify-center ${isFullscreen ? "px-1 md:px-8 lg:px-12" : "px-6 md:px-16 lg:px-32"} min-h-screen w-full transition-all duration-400 ease-in-out ${playing ? "bg-black" : "bg-forest-green-800"}`}
     >
       <video
         className={`rounded-lg shadow border transition-all duration-200 ease-in-out ${playing ? "border-white/30 shadow-[#c52429]/40 shadow-2xl" : "border-forest-green-400"}`}
@@ -126,7 +126,7 @@ export default function TwentySecond() {
         <source src="/videos/Ella22.webm" />
       </video>
       <div
-        className={`rounded-full bg-neutral-500/30 backdrop-blur-2xl text-white flex justify-between w-full items-center gap-8 px-4 py-2 transition-all duration-200 ease-in-out ${playing ? "opacity-30 hover:opacity-100" : "opacity-100"}`}
+        className={`rounded-full bg-neutral-500/30 backdrop-blur-2xl text-white flex justify-between items-center gap-8 px-4 py-2 transition-all duration-200 ease-in-out ${playing ? "opacity-30 hover:opacity-100" : "opacity-100 w-full"} ${isFullscreen ? "absolute bottom-6 left-6 md:left-16 lg:left-32 right-6 md:right-16 lg:right-32" : "relative w-full"}`}
       >
         <button
           className={
